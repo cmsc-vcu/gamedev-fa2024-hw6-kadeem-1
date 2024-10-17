@@ -16,17 +16,17 @@ this game different from others?  What is the goal for playing?
 ## Important Links
 
 - Game URL: < ... >
-- GITHUB URL: < ... >
+- GITHUB URL: < [(https://github.com/cmsc-vcu/gamedev-fa2024-hw6-kadeem-1/tree/main)] >
 - Gameplay Video URL: < ... >
-- Google Doc writeup: < ... >
+- Google Doc writeup: [< (https://docs.google.com/document/d/1HC5G36ronP1IWIZ3KadNkTPnp-aJgIfv6q_A9EM5cus/edit?tab=t.0)>]
 
 ## Files in the repository
 
-./unity/ - this folder contains the Unity game files associated with this game.
-
-./website/ - this folder contains files associated with the *gh-pages* created for this game.
+./Pair Project 2/ - The Unity game that we use to edit and publish
 
 ./docs/ - Don't edit files in this folder directly.  Edit the source documents in the *./website* folder, then use `quarto` to render the documents to HTML and store them in the *./docs* folder.
+
+./.gitignore/ - Handles large files 
 
 
 ## How to modify this README.md
@@ -47,4 +47,8 @@ tasks:
 <https://virginiacommonwealth.instructure.com/courses/105808/assignments/952983>
 
 Good luck!
+
+Credits: 
+
+https://ittaimanero.itch.io/zombie-apocalypse-tileset 
 
