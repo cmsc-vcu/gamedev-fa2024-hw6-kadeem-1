@@ -5,8 +5,8 @@ is destroyed in a spectacular, slow-motion extravaganza.
 
 ## Authors
 
-- John Leonard (jdleonard@vcu.edu)
-- Jason Bennett (jebennett@vcu.edu)
+- Nadeem Abdulmelik (abdulmelikna@vcu.edu)
+- Krish Patel (patelkp7@vcu.edu)
 
 ## Game Description
 
