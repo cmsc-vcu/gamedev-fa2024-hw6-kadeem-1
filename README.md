@@ -28,6 +28,8 @@ this game different from others?  What is the goal for playing?
 
 ./docs/ - Don't edit files in this folder directly.  Edit the source documents in the *./website* folder, then use `quarto` to render the documents to HTML and store them in the *./docs* folder.
 
+./.gitignore/ - Handles large files 
+
 
 ## How to modify this README.md
 
