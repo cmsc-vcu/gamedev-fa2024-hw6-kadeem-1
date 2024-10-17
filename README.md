@@ -16,7 +16,7 @@ this game different from others?  What is the goal for playing?
 ## Important Links
 
 - Game URL: < ... >
-- GITHUB URL: < [...](https://github.com/cmsc-vcu/gamedev-fa2024-hw6-kadeem-1/tree/main) >
+- GITHUB URL: < [(https://github.com/cmsc-vcu/gamedev-fa2024-hw6-kadeem-1/tree/main)] >
 - Gameplay Video URL: < ... >
 - Google Doc writeup: [< (https://docs.google.com/document/d/1HC5G36ronP1IWIZ3KadNkTPnp-aJgIfv6q_A9EM5cus/edit?tab=t.0)>]
 
