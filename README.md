@@ -18,7 +18,7 @@ this game different from others?  What is the goal for playing?
 - Game URL: < ... >
 - GITHUB URL: < ... >
 - Gameplay Video URL: < ... >
-- Google Doc writeup: [< ... >](https://docs.google.com/document/d/1HC5G36ronP1IWIZ3KadNkTPnp-aJgIfv6q_A9EM5cus/edit?tab=t.0)
+- Google Doc writeup: [< (https://docs.google.com/document/d/1HC5G36ronP1IWIZ3KadNkTPnp-aJgIfv6q_A9EM5cus/edit?tab=t.0)>]
 
 ## Files in the repository
 
