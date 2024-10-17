@@ -22,9 +22,7 @@ this game different from others?  What is the goal for playing?
 
 ## Files in the repository
 
-./unity/ - this folder contains the Unity game files associated with this game.
-
-./website/ - this folder contains files associated with the *gh-pages* created for this game.
+./Pair Project 2/ - The Unity game that we use to edit and publish
 
 ./docs/ - Don't edit files in this folder directly.  Edit the source documents in the *./website* folder, then use `quarto` to render the documents to HTML and store them in the *./docs* folder.
 
