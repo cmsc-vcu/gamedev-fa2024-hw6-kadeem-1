@@ -50,4 +50,5 @@ Good luck!
 Credits: 
 
 https://ittaimanero.itch.io/zombie-apocalypse-tileset 
+https://seliel-the-shaper.itch.io/character-base
 
