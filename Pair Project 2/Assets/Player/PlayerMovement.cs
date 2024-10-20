@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Movement
+    // Movement
     public float moveSpeed;
     Rigidbody2D rb;
     [HideInInspector]
@@ -15,11 +15,15 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 moveDir;
     [HideInInspector]
     public Vector2 lastMovedVector;
+
+    private Vector2 initialPlayerPosition;  // To store initial player position
+
     // Start is called before the first frame update
     void Start()
     {
+        initialPlayerPosition = transform.position; // Store initial position
         rb = GetComponent<Rigidbody2D>();
-        lastMovedVector = new Vector2(1,0f);
+        lastMovedVector = new Vector2(1, 0f);
     }
 
     // Update is called once per frame
@@ -28,33 +32,49 @@ public class PlayerMovement : MonoBehaviour
         InputManagement();
     }
 
-    void FixedUpdate(){
-           Move();     
+    public void ResetPlayerPosition()
+    {
+        transform.position = initialPlayerPosition; // Reset position to initial
     }
 
-    void InputManagement(){
+    // Call this method when the player "dies"
+    public void PlayerDeath()
+    {
+        ResetPlayerPosition();  // Reset the player to the initial position
+        EnemyMovement.ResetAllEnemies(); // Reset all enemies when the player dies
+    }
+
+    void FixedUpdate()
+    {
+        Move();
+    }
+
+    void InputManagement()
+    {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDir = new Vector2(moveX, moveY).normalized;
-        if(moveDir.x != 0){
+
+        if (moveDir.x != 0)
+        {
             lastHorizontalVector = moveDir.x;
-            lastMovedVector = new Vector2(lastHorizontalVector, 0f);    //Last moved on x axis
-
+            lastMovedVector = new Vector2(lastHorizontalVector, 0f); // Last moved on x-axis
         }
-        if(moveDir.y != 0){
+
+        if (moveDir.y != 0)
+        {
             lastVerticalVector = moveDir.y;
-            lastMovedVector = new Vector2(0f, lastVerticalVector);    //Last moved on y axis
-
-        }
-        if(moveDir.x != 0 && moveDir.y != 0){
-            lastMovedVector = new Vector2(lastHorizontalVector,lastVerticalVector);  //While moving
+            lastMovedVector = new Vector2(0f, lastVerticalVector); // Last moved on y-axis
         }
 
+        if (moveDir.x != 0 && moveDir.y != 0)
+        {
+            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector); // While moving
+        }
     }
 
-    void Move(){
+    void Move()
+    {
         rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
-
-
     }
 }
