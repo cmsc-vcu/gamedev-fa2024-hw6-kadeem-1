@@ -2,32 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KnifeBehavior : ProjectileWeaponBehavior
+public class KnifeBehavior : MonoBehaviour
 {
-    KnifeController kc;
+    public float knifeSpeed = 10f;
+    private Vector2 direction;
 
-    protected override void Start()
+    // Set the direction of the knife
+    public void DirectionChecker(Vector2 moveDir)
     {
-        base.Start();
-        kc = FindObjectOfType<KnifeController>();
+        direction = moveDir;
     }
 
     void Update()
     {
-        transform.position += direction * kc.speed * Time.deltaTime;  // Sets movement of Knife object
+        // Move the knife in the set direction
+        transform.Translate(direction * knifeSpeed * Time.deltaTime);
     }
 
-    // Detect collisions between the knife and enemies (zombies)
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Enemy"))  // Assuming your enemies have the "Enemy" tag
+        // Check if the object the knife hits is an enemy
+        if (collision.CompareTag("Enemy"))
         {
-            EnemyMovement enemy = other.GetComponent<EnemyMovement>();
+            EnemyMovement enemy = collision.GetComponent<EnemyMovement>();
             if (enemy != null)
             {
-                enemy.Die();  // Kill the enemy
+                enemy.Die(); // Kill the enemy
             }
-            Destroy(gameObject);  // Destroy the knife on impact (optional)
+            Destroy(gameObject); // Destroy the knife after it hits something
         }
     }
 }
