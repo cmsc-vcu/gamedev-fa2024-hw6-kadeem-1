@@ -43,4 +43,5 @@ public class TimerManager : MonoBehaviour
         // Display the rounded remaining time
         timerText.text = "Time: " + Mathf.Round(timeRemaining).ToString();
     }
+    
 }

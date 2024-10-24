@@ -11,8 +11,8 @@ public class EnemyMovement : MonoBehaviour
     private static List<EnemyMovement> enemies = new List<EnemyMovement>();  // Store all enemies
     private bool isDead = false;  // Track if the enemy is dead
 
-    public float health = 60f;  // Set initial health to 60 points
-    public float damagePerHit = 10f;  // Damage the enemy takes per hit
+    public int health = 60;  // Default health points for the enemy
+    public int damagePerHit = 10;  // Amount of damage dealt to the player on contact
 
     void Start()
     {
@@ -23,22 +23,21 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        if (!isDead)
+        if (!isDead && player != null)  // Only move if the enemy is not dead and the player still exists
         {
             // Constantly move towards the player
             transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
         }
     }
 
-    // Handle collision with the knife
+    // Handle collision with the knife or player
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Knife Weapon"))  // Knife must be tagged as "Knife"
+        if (other.CompareTag("Knife Weapon"))
         {
-            TakeDamage(damagePerHit);  // Apply damage when hit by the knife
+            TakeDamage(10);  // Reduce health by 10 when hit by the knife
         }
-
-        if (other.CompareTag("Player"))  // Player must be tagged as "Player"
+        else if (other.CompareTag("Player"))  // Assuming your player has the "Player" tag
         {
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             if (playerMovement != null)
@@ -48,16 +47,19 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Method to reduce enemy health and check for death
-    public void TakeDamage(float damage)
+    // Continuously deal damage to the player when in contact
+    private void OnCollisionStay2D(Collision2D col)
+{
+    if (col.gameObject.CompareTag("Player"))
     {
-        health -= damage;  // Reduce the health by the amount of damage
-
-        if (health <= 0)
+        PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
+        if (player != null)
         {
-            Die();  // Call the Die method if health is 0 or below
+            player.TakeDamage(damagePerHit); // Call TakeDamage method from PlayerStats
         }
     }
+}
+
 
     // Kill this enemy (make them disappear)
     public void Die()
@@ -66,10 +68,19 @@ public class EnemyMovement : MonoBehaviour
         gameObject.SetActive(false);  // Hide the enemy
     }
 
-    // Increase the enemy's speed
     public void IncreaseSpeed(float increaseAmount)
     {
         moveSpeed += increaseAmount;  // Increase the enemy's movement speed
+    }
+
+    // Enemy takes damage
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
     // Reset all enemies to their initial positions
@@ -78,9 +89,9 @@ public class EnemyMovement : MonoBehaviour
         foreach (EnemyMovement enemy in enemies)
         {
             enemy.isDead = false;
-            enemy.health = 60f;  // Reset health to 60
             enemy.gameObject.SetActive(true);  // Reactivate enemy
             enemy.transform.position = enemy.initialEnemyPosition;  // Reset to initial position
+            enemy.health = 60;  // Reset health to default 60
         }
     }
 }
