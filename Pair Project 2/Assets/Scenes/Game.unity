@@ -136,6 +136,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 1440273507}
     m_Modifications:
     - target: {fileID: 4679101468538387549, guid: 95664a1324f91c94083beb42e7a17b5f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679101468538387549, guid: 95664a1324f91c94083beb42e7a17b5f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679101468538387549, guid: 95664a1324f91c94083beb42e7a17b5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.6200001
       objectReference: {fileID: 0}
@@ -330,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb26f5dced189a544b6cc2988e713a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 3
   lastHorizontalVector: 0
   lastVerticalVector: 0
   moveDir: {x: 0, y: 0}
@@ -376,6 +384,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1440273507}
     m_Modifications:
+    - target: {fileID: 4685057416028064815, guid: 1950dd2accf1dfc4e8d672d00305c203, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685057416028064815, guid: 1950dd2accf1dfc4e8d672d00305c203, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4685057416028064815, guid: 1950dd2accf1dfc4e8d672d00305c203, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8499999
@@ -610,12 +626,13 @@ MonoBehaviour:
   - {fileID: 1816716068278904008, guid: 245a51bcf1a8d3b49830c3a1aa7282a7, type: 3}
   - {fileID: 1816716068278904008, guid: 5f0f4c9242158bb40ada1151e5b2c3b3, type: 3}
   player: {fileID: 104438993}
-  checkRadius: 0.2
+  checkRadius: 0.1
   terrainMask:
     serializedVersion: 2
     m_Bits: 64
   currentChunk: {fileID: 1856886026}
-  spawnedChunks: []
+  spawnedChunks:
+  - {fileID: 1856886026}
   maxOpDist: 50
   optimizerCDDur: 0
 --- !u!4 &790084078 stripped
@@ -816,6 +833,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1440273507}
     m_Modifications:
+    - target: {fileID: 2451868491822836715, guid: a0904a3ea7aebb3459b3f551c9a34d4b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451868491822836715, guid: a0904a3ea7aebb3459b3f551c9a34d4b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2451868491822836715, guid: a0904a3ea7aebb3459b3f551c9a34d4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.11000013
@@ -1303,7 +1328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5205419673066007555, guid: a837dabfaaf09d24cb6301dfa3cbac1d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.7228208
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5205419673066007555, guid: a837dabfaaf09d24cb6301dfa3cbac1d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5205419673066007555, guid: a837dabfaaf09d24cb6301dfa3cbac1d, type: 3}
       propertyPath: m_LocalPosition.x

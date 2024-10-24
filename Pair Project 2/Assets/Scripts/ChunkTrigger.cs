@@ -6,7 +6,6 @@ public class ChunkTrigger : MonoBehaviour
 {
     MapController mc; 
     public GameObject targetMap;
-    // Start is called before the first frame update
     void Start()
     {
         mc = FindObjectOfType<MapController>();
