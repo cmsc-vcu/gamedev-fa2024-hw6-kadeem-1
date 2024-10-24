@@ -6,14 +6,13 @@ public class EnemyMovement : MonoBehaviour
 {
     Transform player;
     public float moveSpeed;
-    
-    // Health-related variables
-    public int enemyHealth = 60; // Start health at 60 points
-    public int damagePerHit = 10; // Damage per hit from the knife
-    
+
     private Vector2 initialEnemyPosition;  // Store initial position for this enemy
     private static List<EnemyMovement> enemies = new List<EnemyMovement>();  // Store all enemies
     private bool isDead = false;  // Track if the enemy is dead
+
+    public float health = 60f;  // Set initial health to 60 points
+    public float damagePerHit = 10f;  // Damage the enemy takes per hit
 
     void Start()
     {
@@ -34,12 +33,12 @@ public class EnemyMovement : MonoBehaviour
     // Handle collision with the knife
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Knife Weapon"))  // Assuming the knife has the "Knife" tag
+        if (other.CompareTag("Knife Weapon"))  // Knife must be tagged as "Knife"
         {
-            TakeDamage(damagePerHit);  // Call TakeDamage when hit by the knife
+            TakeDamage(damagePerHit);  // Apply damage when hit by the knife
         }
 
-        if (other.CompareTag("Player"))  // Assuming the player has the "Player" tag
+        if (other.CompareTag("Player"))  // Player must be tagged as "Player"
         {
             PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             if (playerMovement != null)
@@ -49,28 +48,28 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    // Method to reduce enemy health
-    public void TakeDamage(int damage)
+    // Method to reduce enemy health and check for death
+    public void TakeDamage(float damage)
     {
-        enemyHealth -= damage;  // Reduce health
+        health -= damage;  // Reduce the health by the amount of damage
 
-        if (enemyHealth <= 0)
+        if (health <= 0)
         {
-            Die();  // Kill the enemy if health reaches zero
+            Die();  // Call the Die method if health is 0 or below
         }
     }
 
-    // Kill the enemy (make them disappear)
+    // Kill this enemy (make them disappear)
     public void Die()
     {
         isDead = true;
         gameObject.SetActive(false);  // Hide the enemy
     }
 
-    // Method to increase enemy speed (for use with the timer)
-    public void IncreaseSpeed(float increment)
+    // Increase the enemy's speed
+    public void IncreaseSpeed(float increaseAmount)
     {
-        moveSpeed += increment;  // Increase the enemy's movement speed
+        moveSpeed += increaseAmount;  // Increase the enemy's movement speed
     }
 
     // Reset all enemies to their initial positions
@@ -79,6 +78,7 @@ public class EnemyMovement : MonoBehaviour
         foreach (EnemyMovement enemy in enemies)
         {
             enemy.isDead = false;
+            enemy.health = 60f;  // Reset health to 60
             enemy.gameObject.SetActive(true);  // Reactivate enemy
             enemy.transform.position = enemy.initialEnemyPosition;  // Reset to initial position
         }
