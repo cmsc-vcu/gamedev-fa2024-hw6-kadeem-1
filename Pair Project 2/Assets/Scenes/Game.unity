@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Little Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 7744161338691733271, guid: 95664a1324f91c94083beb42e7a17b5f, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -436,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crippled Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 8672185386976723089, guid: 1950dd2accf1dfc4e8d672d00305c203, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -503,9 +511,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 304395644418964976, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 509761478}
-    - targetCorrespondingSourceObject: {fileID: 304395644418964976, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1381900468}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7811719563104735442, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
       insertIndex: -1
@@ -783,51 +788,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82c97f3b6be043942a31533459f80c44, type: 3}
---- !u!1 &1381900467
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1381900468}
-  - component: {fileID: 1381900469}
-  m_Layer: 0
-  m_Name: Knife Behavior
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1381900468
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381900467}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 104438997}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1381900469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381900467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e933fd26c2972540b8d47a66774afb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyAfterSeconds: 4
 --- !u!1 &1440273506
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,7 +895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8630702939794868351, guid: a0904a3ea7aebb3459b3f551c9a34d4b, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1254,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knife Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 4335942509451865356, guid: e3ca16cd368e7af498a05d86ac5742c6, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1377,6 +1341,10 @@ PrefabInstance:
     - target: {fileID: 1186241788579487201, guid: a837dabfaaf09d24cb6301dfa3cbac1d, type: 3}
       propertyPath: m_Name
       value: Skinny Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186241788579487201, guid: a837dabfaaf09d24cb6301dfa3cbac1d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5205419673066007555, guid: a837dabfaaf09d24cb6301dfa3cbac1d, type: 3}
       propertyPath: m_LocalScale.x

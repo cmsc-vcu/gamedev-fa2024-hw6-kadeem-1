@@ -13,8 +13,11 @@ public class KnifeController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedKnife = Instantiate(prefab);
-        spawnedKnife.transform.position = transform.position;   // Assign position to be the same as obj that is parent to Player
-        spawnedKnife.GetComponent<KnifeBehavior>().DirectionChecker(pm.lastMovedVector);   // Sets direction based on player's last movement
+        GameObject spawnedKnife = Instantiate(prefab, transform.position, Quaternion.identity); // Instantiate knife
+        spawnedKnife.transform.position = transform.position;  // Assign knife position to player's position
+        spawnedKnife.GetComponent<KnifeBehavior>().DirectionChecker(pm.lastMovedVector);  // Set knife direction
+
+        // Detach the knife from the player so it can move independently
+        spawnedKnife.transform.parent = null;
     }
 }
