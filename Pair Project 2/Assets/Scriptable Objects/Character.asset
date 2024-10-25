@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44bae49112483b40810d8bbf8ab2cbc, type: 3}
   m_Name: Character
   m_EditorClassIdentifier: 
-  startingWeapon: {fileID: 7811719563104735442, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
+  startingWeapon: {fileID: 2617326278199076870, guid: 011f1b13cb61c634a8223214846e625c, type: 3}
   maxHealth: 100
-  regeneration: 0
+  regeneration: 5
   moveSpeed: 5
   might: 0
   projectileSpeed: 0

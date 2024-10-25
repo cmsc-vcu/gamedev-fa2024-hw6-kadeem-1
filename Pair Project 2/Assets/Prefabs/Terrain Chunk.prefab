@@ -41,7 +41,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81272837929405394}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -59,7 +59,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!66 &8610442787311632671
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47be282ae40ced44fb1074e4e16e8d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  propSpawnpoints:
+  propSpawnPoints:
   - {fileID: 81272837929405394}
   - {fileID: 6519830412576407695}
   - {fileID: 7497656182850183813}
@@ -200,12 +200,14 @@ MonoBehaviour:
   - {fileID: 8871305126129627658, guid: 01282881df8d17b4da4e894c9519765c, type: 3}
   - {fileID: 4813932191766330056, guid: b1f595fa106b68746897a7b7e58adaa1, type: 3}
   - {fileID: 4735672109575594936, guid: 557be9fdc34ed7d46b949907ca0c8ec4, type: 3}
+  - {fileID: 5881244168461902500, guid: 471d88fa6e659544fbbce998cd27a32f, type: 3}
   - {fileID: 6225987381431466978, guid: 6bd5809246eedeb40937116289e09236, type: 3}
   - {fileID: 8697873553144674925, guid: b5cd650dd8c5e044daae44f9502b4f23, type: 3}
   - {fileID: 5086216227412965449, guid: 154aeb27c38d223448bea9dbe1db8048, type: 3}
   - {fileID: 266165718495701538, guid: b4299f215da2f5340b7d8c5de0e3c4ca, type: 3}
   - {fileID: 8932339880830734845, guid: b2c927f87833b864297a7aeb7e0bbd74, type: 3}
   - {fileID: 4570746308780590111, guid: 43e4e3f02b024574f8bae85de14134e3, type: 3}
+  - {fileID: 4376907479994880575, guid: 605ed557c48d95d4dbb13e5ae3ec9efd, type: 3}
 --- !u!61 &8454528483756763052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -507,7 +509,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6519830412576407695}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -525,7 +527,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!66 &7625356120288628136
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -644,7 +646,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7497656182850183813}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -662,7 +664,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!66 &1449521711349974097
 CompositeCollider2D:
   m_ObjectHideFlags: 0

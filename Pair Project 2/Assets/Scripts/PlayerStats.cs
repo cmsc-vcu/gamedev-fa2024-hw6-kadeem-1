@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -12,8 +14,25 @@ public class PlayerStats : MonoBehaviour
     float currentMight;
     float currentProjectileSpeed;
 
-    // Add a field for respawn position
-    public Vector2 respawnPosition;
+    [Header("I-frames")]
+    public float invincibilityDuration;
+    float invincibilityTimer;
+    bool isInvincible;
+
+    [Header("UI")]
+    public Image healthBar;
+
+    void Start() {
+        UpdateHealthBar();
+    }
+
+    void Update() {
+        if(invincibilityTimer > 0) {
+            invincibilityTimer -= Time.deltaTime;
+        } else if(isInvincible) { 
+            isInvincible = false; 
+        }
+    }
 
     void Awake() {
         currentHealth = characterData.MaxHealth;
@@ -21,27 +40,42 @@ public class PlayerStats : MonoBehaviour
         currentMoveSpeed = characterData.MoveSpeed;
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
-
-        respawnPosition = transform.position; // Set initial respawn position
     }
 
     public void TakeDamage(float dmg) {
-        currentHealth -= dmg; 
+        if(!isInvincible){
+            currentHealth -= dmg; 
 
-        if(currentHealth <= 0){ 
-            Respawn(); // Call respawn method instead of Kill
-        }
+            invincibilityTimer = invincibilityDuration;
+            isInvincible = true;
+
+            if(currentHealth <= 0){ 
+                Kill(); 
+            }
+
+            UpdateHealthBar();
+        } 
     }
 
-    // New method to handle respawning
-    private void Respawn() {
-        currentHealth = characterData.MaxHealth; // Reset health to max health
-        transform.position = respawnPosition; // Respawn player at the designated position
-        // Additional logic to reset the player's state can be added here if needed
+    void UpdateHealthBar() {
+        healthBar.fillAmount = currentHealth / characterData.MaxHealth;
     }
 
     public void Kill() {
-        Destroy(gameObject);
+        Debug.Log("Player died");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void RestoreHealth(float amount) {
+        if(currentHealth < characterData.MaxHealth) {
+            currentHealth += amount;
+            UpdateHealthBar();
+            if(currentHealth > characterData.MaxHealth) {
+                currentHealth = characterData.MaxHealth;
+                UpdateHealthBar();
+            }
+        }
+        UpdateHealthBar();
     }
 }
 
