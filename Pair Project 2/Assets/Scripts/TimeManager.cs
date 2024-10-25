@@ -29,7 +29,7 @@ public class TimerManager : MonoBehaviour
             if (timeRemaining <= 0f)
             {
                 timeRemaining += timeLimit; // Reset the timer while maintaining any overflow
-                SpeedUpEnemies(); // Increase enemy speed
+                // SpeedUpEnemies(); // Increase enemy speed
                 OnTimerReset(); // Notify other systems
             }
 
@@ -38,15 +38,15 @@ public class TimerManager : MonoBehaviour
         }
     }
 
-    void SpeedUpEnemies()
-    {
-        // Find all active enemies and increase their speed
-        EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();
-        foreach (EnemyMovement enemy in enemies)
-        {
-            enemy.IncreaseSpeed(speedIncrease);
-        }
-    }
+    // void SpeedUpEnemies()
+    // {
+    //     // Find all active enemies and increase their speed
+    //     EnemyMovement[] enemies = FindObjectsOfType<EnemyMovement>();
+    //     foreach (EnemyMovement enemy in enemies)
+    //     {
+    //         enemy.IncreaseSpeed(speedIncrease);
+    //     }
+    // }
 
     void UpdateTimerDisplay()
     {

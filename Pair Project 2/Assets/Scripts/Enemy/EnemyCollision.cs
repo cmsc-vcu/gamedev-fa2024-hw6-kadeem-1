@@ -5,7 +5,7 @@ public class EnemyCollision : MonoBehaviour
 {
     public GameObject player; 
     // When something enters the enemy's trigger collider
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
         // Check if the object that entered the trigger is the player
         if (col.CompareTag("Player"))
