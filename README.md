@@ -18,31 +18,29 @@ This game puts you, the player, in a unique survival challenge where you use a â
 
 ## Files in the repository
 
-./Pair Project 2/ - The Unity game that we use to edit and publish.
+./.Pair Project 2/ - The Unity game that we use to edit and publish.
 
-./Assets/ - Contains all essentials of game including the scenes.
+./Pair Project 2/Assets/ - Contains all essentials of game including the scenes.
 
-./Animations/ - Contains the animation movements of player.
+./Pair Project 2/Assets/Animations/ - Contains the animation movements of player.
 
-./Player/ - Contains player movement, player animation, camera movement with the player and player prefab to use in the hierarchy.
+./Pair Project 2/Assets/Player/ - Contains player movement, player animation, camera movement with the player and player prefab to use in the hierarchy.
 
-./Prefabs/ - Items for the enemy, weapon, terrain, and other essentials for the game to add to the scene.
+./Pair Project 2/Assets/Prefabs/ - Items for the enemy, weapon, terrain, and other essentials for the game to add to the scene.
 
-./Scenes/ - The game scenes in which the game operates.
+./Pair Project 2/Assets/Scenes/ - The game scenes in which the game operates.
 
-./Scriptable Objects/ - Scripts for the player and enemy to spawn for each level.
+./Pair Project 2/Assets/Scriptable Objects/ - Scripts for the player and enemy to spawn for each level.
 
-./Scripts/ - Basic scripts for the enemy, player, player stats, health for both enemy and player, and all the essentials needed for movement and function for the characters.
+./Pair Project 2/Assets/Scripts/ - Basic scripts for the enemy, player, player stats, health for both enemy and player, and all the essentials needed for movement and function for the characters.
 
-./TextMesh Pro/ - The text files for displaying the timer for each level.
+./Pair Project 2/Assets/TextMesh Pro/ - The text files for displaying the timer for each level.
 
-./Tile Palette/ - The background and tile assets for the scene.
+./Pair Project 2/Assets/Tile Palette/ - The background and tile assets for the scene.
 
-./Title Scene/ - Self explanatory title scene screen for the scene.
+./Pair Project 2/Assets/Title Scene/ - Self explanatory title scene screen for the scene.
 
-./Zombie Apocalypse Tileset/ - The assets for the zombies and background items for the scene.
-
-./docs/ - Don't edit files in this folder directly.  Edit the source documents in the *./website* folder, then use `quarto` to render the documents to HTML and store them in the *./docs* folder.
+./Pair Project 2/Assets/Zombie Apocalypse Tileset/ - The assets for the zombies and background items for the scene.
 
 ./.gitignore/ - Handles large files 
 
