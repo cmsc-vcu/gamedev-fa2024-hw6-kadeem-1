@@ -94,4 +94,9 @@ public class EnemyMovement : MonoBehaviour
             enemy.health = 60;  // Reset health to default 60
         }
     }
+
+    private void OnDestroy() {
+        EnemySpawner es = FindObjectOfType<EnemySpawner>();
+        es.OnEnemyKilled();
+    }
 }
