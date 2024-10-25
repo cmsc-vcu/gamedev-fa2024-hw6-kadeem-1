@@ -7,7 +7,7 @@ Brace yourself for a high-stakes, action-packed zombie filled apocolyptic surviv
 - Krish Patel (patelkp7@vcu.edu)
 
 ## Game Description
-This game puts you, the player, in a unique survival challenge where you use a “shooting knife”, shaped like a boomerang, to eliminate waves of zombies within a timed interval. The goal is to survive as long as possible, managing health and timing strategically. If zombies aren’t defeated in time, faster waves spawn, adding pressure and demanding precise attacks. Key features include a unique shooting knife mechanic with a significant amount of damage, increase in enemy speed based on player performance, and health penalties if contacted by zombies. Health depletion triggers a respawn with the timer reset, giving you another chance to improve. This blend of action, timing, and strategy sets the game apart, making it a thrilling test of skills and endurance.
+This game puts you, the player, in a unique survival challenge where you use a “shooting knife”, shaped like a boomerang, to eliminate waves of zombies within a timed interval. The goal is to survive as long as possible, managing health and timing strategically. If zombies aren’t defeated in time, faster and more aggressive waves spawn, adding pressure and demanding precise attacks. Key features include a unique shooting knife mechanic with a significant amount of damage, increase in enemy speed and presence based on player performance, and health penalties if contacted by zombies. Health depletion triggers a respawn with the timer reset, giving you another chance to improve. This blend of action, timing, and strategy sets the game apart, making it a thrilling test of skills and endurance.
 
 ## Important Links
 
