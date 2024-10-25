@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class PlayerStats : MonoBehaviour
     public float invincibilityDuration;
     float invincibilityTimer;
     bool isInvincible;
+
+    [Header("UI")]
+    public Image healthBar;
+
+    void Start() {
+        UpdateHealthBar();
+    }
 
     void Update() {
         if(invincibilityTimer > 0) {
@@ -44,8 +52,13 @@ public class PlayerStats : MonoBehaviour
             if(currentHealth <= 0){ 
                 Kill(); 
             }
-        }
-        
+
+            UpdateHealthBar();
+        } 
+    }
+
+    void UpdateHealthBar() {
+        healthBar.fillAmount = currentHealth / characterData.MaxHealth;
     }
 
     public void Kill() {
@@ -56,10 +69,13 @@ public class PlayerStats : MonoBehaviour
     public void RestoreHealth(float amount) {
         if(currentHealth < characterData.MaxHealth) {
             currentHealth += amount;
+            UpdateHealthBar();
             if(currentHealth > characterData.MaxHealth) {
                 currentHealth = characterData.MaxHealth;
+                UpdateHealthBar();
             }
         }
+        UpdateHealthBar();
     }
 }
 

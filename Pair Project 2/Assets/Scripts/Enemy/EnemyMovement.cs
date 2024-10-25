@@ -14,6 +14,8 @@ public class EnemyMovement : MonoBehaviour
     public int health = 60;  // Default health points for the enemy
     public int damagePerHit = 10;  // Amount of damage dealt to the player on contact
 
+    public EnemySpawner es; 
+
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>().transform;
@@ -49,23 +51,25 @@ public class EnemyMovement : MonoBehaviour
 
     // Continuously deal damage to the player when in contact
     private void OnCollisionStay2D(Collision2D col)
-{
-    if (col.gameObject.CompareTag("Player"))
     {
-        PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
-        if (player != null)
+        if (col.gameObject.CompareTag("Player"))
         {
-            player.TakeDamage(damagePerHit); // Call TakeDamage method from PlayerStats
+            PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
+            if (player != null)
+            {
+                player.TakeDamage(damagePerHit); // Call TakeDamage method from PlayerStats
+            }
         }
     }
-}
-
 
     // Kill this enemy (make them disappear)
     public void Die()
     {
+        if(es != null) {
+            es.OnEnemyKilled();
+        }
         isDead = true;
-        gameObject.SetActive(false);  // Hide the enemy
+        Destroy(gameObject);
     }
 
     public void IncreaseSpeed(float increaseAmount)

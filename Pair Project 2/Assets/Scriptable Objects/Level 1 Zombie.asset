@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5196cd40711454f8dd95b3b0fe4815, type: 3}
+  m_Script: {fileID: 11500000, guid: 568c208221019cd4287a6eb1b4448163, type: 3}
   m_Name: Level 1 Zombie
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  maxHealth: 10
-  damage: 1
+  enemyData: {fileID: 0}
+  es: {fileID: 0}

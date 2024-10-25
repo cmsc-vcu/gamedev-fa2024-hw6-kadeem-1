@@ -33,13 +33,16 @@ public class EnemySpawner : MonoBehaviour
 
     Transform player;
 
+    bool isWaveActive = false;
+
     void Start() {
         player = FindObjectOfType<PlayerStats>().transform;
         CalculateWaveQuota();
     }
 
     void Update() {
-        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0){
+        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0 && !isWaveActive){
+            isWaveActive = true;
             StartCoroutine(BeginNextWave());
         }
         
@@ -52,8 +55,11 @@ public class EnemySpawner : MonoBehaviour
     }
 
     IEnumerator BeginNextWave() {
+        isWaveActive = true;
+        
         yield return new WaitForSeconds(waveInterval);
         if(currentWaveCount < waves.Count - 1){
+            isWaveActive = false; 
             currentWaveCount++;
             CalculateWaveQuota();
         }

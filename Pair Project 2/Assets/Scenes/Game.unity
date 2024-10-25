@@ -225,6 +225,81 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 50
   m_TargetDisplay: 0
+--- !u!1 &91309567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91309570}
+  - component: {fileID: 91309569}
+  - component: {fileID: 91309568}
+  m_Layer: 0
+  m_Name: Health bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &91309568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91309567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.18009079, b: 0.18009079, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 49379e28996788a4d81417a72471b113, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &91309569
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91309567}
+  m_CullTransparentMesh: 1
+--- !u!224 &91309570
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91309567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1019549220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.2}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &104438993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7811719563104735442, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
@@ -282,6 +357,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: d49c76a325c6df34b8a36abaa914fbaa, type: 2}
   invincibilityDuration: 0.5
+  healthBar: {fileID: 91309568}
 --- !u!1001 &386503835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -345,6 +421,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 304395644418964976, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1620079070}
+    - targetCorrespondingSourceObject: {fileID: 304395644418964976, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1019549220}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7811719563104735442, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
       insertIndex: -1
@@ -356,6 +435,81 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 104438999}
   m_SourcePrefab: {fileID: 100100000, guid: 924d252f6d69c9a4882133bced7b62ff, type: 3}
+--- !u!1 &569162172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569162173}
+  - component: {fileID: 569162175}
+  - component: {fileID: 569162174}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &569162173
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569162172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1019549220}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 0.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &569162174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569162172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &569162175
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569162172}
+  m_CullTransparentMesh: 1
 --- !u!1 &770608710
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +616,109 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1019549219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019549220}
+  - component: {fileID: 1019549223}
+  - component: {fileID: 1019549222}
+  - component: {fileID: 1019549221}
+  m_Layer: 0
+  m_Name: Health Bar Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1019549220
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019549219}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 569162173}
+  - {fileID: 91309570}
+  m_Father: {fileID: 104438997}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.75}
+  m_SizeDelta: {x: 5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1019549221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019549219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1019549222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019549219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &1019549223
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019549219}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 1679936824}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1107634496
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,14 +899,546 @@ MonoBehaviour:
       enemyCount: 2
       spawnCount: 0
       enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
-    waveQuota: 0
+    waveQuota: 25
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 2
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    waveQuota: 50
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 3
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 4
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 3 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: ebfcb92c2eb8b014ea02e2f3e5016501, type: 3}
+    waveQuota: 50
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 5
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 3 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: ebfcb92c2eb8b014ea02e2f3e5016501, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 5
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 1
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
+    spawnInterval: 1
+    spawnCount: 0
+  - waveName: Wave 6
+    enemyGroups:
+    - enemyName: Level 1 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 120d5c53684315f428ced174d1a7c924, type: 3}
+    - enemyName: Level 1 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 6d93c8d7f9a70de4c8cf26522f0318b2, type: 3}
+    - enemyName: Level 1 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 452852634931534526, guid: 99f72f725652ce741bbfe603926cc944, type: 3}
+    - enemyName: Level 2 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: a6cb822286d67e34e9f125af3c486c5d, type: 3}
+    - enemyName: Level 2 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: ee436682fb9b4d74c9c152fc25edd876, type: 3}
+    - enemyName: Level 2 Zombie Variant 2
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 6914308118520235784, guid: 38e581345d4a13f46bb9afc6f6332b45, type: 3}
+    - enemyName: Level 3 Zombie
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: 521be727d9f605c41a1c0fae02812b29, type: 3}
+    - enemyName: Level 3 Zombie Variant 1
+      enemyCount: 4
+      spawnCount: 0
+      enemyPrefab: {fileID: 8717367944716340209, guid: e30f646b02ea459478964d6e738fe022, type: 3}
+    - enemyName: Level 4 Zombie
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 4bda25882617f87409a6fca8719cadb6, type: 3}
+    - enemyName: Level 4 Zombie Variant 1
+      enemyCount: 2
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 30214c7220c7e7e43a0f47af40b28162, type: 3}
+    - enemyName: Level 4 Zombie Variant 2
+      enemyCount: 3
+      spawnCount: 0
+      enemyPrefab: {fileID: 7164596126054281276, guid: 0080369460dd1834c89051765ec41280, type: 3}
+    waveQuota: 100
     spawnInterval: 1
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 8
+  maxEnemiesAllowed: 100
   maxEnemiesReached: 0
-  waveInterval: 3
+  waveInterval: 15
 --- !u!4 &1115511737
 Transform:
   m_ObjectHideFlags: 0
@@ -682,7 +1471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1488962250
 RectTransform:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStats : MonoBehaviour
 {
     public EnemyScriptableObject enemyData;
+    public EnemySpawner es; 
 
     //Current stats
     float currentMoveSpeed;
@@ -31,6 +32,10 @@ public class EnemyStats : MonoBehaviour
 
     public void Kill()
     {
+        if(es != null) {
+            es.OnEnemyKilled();
+        }
+        
         Destroy(gameObject);
     }
 
