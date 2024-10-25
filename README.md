@@ -11,9 +11,9 @@ This game puts you, the player, in a unique survival challenge where you use a â
 
 ## Important Links
 
-- Game URL: < ... >
+- Game URL: < [(https://play.unity.com/en/games/f4a55115-0509-4de4-a59a-2f27bd8d0dfa/webgl-builds)] >
 - GITHUB URL: < [(https://github.com/cmsc-vcu/gamedev-fa2024-hw6-kadeem-1/tree/main)] >
-- Gameplay Video URL: < ... >
+- Gameplay Video URL: < [(https://drive.google.com/file/d/1KjjyAUZebNiS-mTxOP_d4r4fHstIKnVN/view?usp=drive_link)] >
 - Google Doc writeup: [< (https://docs.google.com/document/d/1HC5G36ronP1IWIZ3KadNkTPnp-aJgIfv6q_A9EM5cus/edit?tab=t.0)>]
 
 ## Files in the repository
@@ -68,4 +68,5 @@ Credits:
 
 https://ittaimanero.itch.io/zombie-apocalypse-tileset 
 https://seliel-the-shaper.itch.io/character-base
+Music by Rylan Jimenez
 
