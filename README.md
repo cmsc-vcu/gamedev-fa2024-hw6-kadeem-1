@@ -68,5 +68,5 @@ Credits:
 
 https://ittaimanero.itch.io/zombie-apocalypse-tileset 
 https://seliel-the-shaper.itch.io/character-base
-Music by Rylan Jimenez
+Music by Rylan Jimenez & https://www.fesliyanstudios.com/royalty-free-music/download/boss-time/2340 
 
