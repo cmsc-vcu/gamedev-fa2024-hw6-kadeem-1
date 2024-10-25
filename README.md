@@ -1,6 +1,5 @@
 # Zompocalypse - Fall 2024
-
-Zombie Game
+Brace yourself for a high-stakes, action-packed zombie filled apocolyptic survival game where every second counts! Armed with a shooting knife boomerang, you must fend off waves of relentless zombies before time runs out—fail, and even faster, deadlier enemies spawn with a bloodier and more violent taste for your blood. Each hit drains your health, and respawning resets the timer but cranks up the intensity, demanding pure skill and unbreakable focus to survive.
 
 ## Authors
 
@@ -8,9 +7,7 @@ Zombie Game
 - Krish Patel (patelkp7@vcu.edu)
 
 ## Game Description
-
-Provide more details of the game.  Discuss any unique game play features.  Why is
-this game different from others?  What is the goal for playing?
+This game puts you, the player, in a unique survival challenge where you use a “shooting knife”, shaped like a boomerang, to eliminate waves of zombies within a timed interval. The goal is to survive as long as possible, managing health and timing strategically. If zombies aren’t defeated in time, faster waves spawn, adding pressure and demanding precise attacks. Key features include a unique shooting knife mechanic with a significant amount of damage, increase in enemy speed based on player performance, and health penalties if contacted by zombies. Health depletion triggers a respawn with the timer reset, giving you another chance to improve. This blend of action, timing, and strategy sets the game apart, making it a thrilling test of skills and endurance.
 
 ## Important Links
 
